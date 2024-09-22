@@ -5,11 +5,13 @@ class ResumeGen < Formula
   sha256 "e78eb204e4af3a3ab00f417820a2a974c5d16ecd83d3a3ba2efee30a5e76785e"
   license "MIT"
 
+  depends_on "ruby"
+
   def install
-    bin.install bin/console
+    bin.install 'bin/resume-gen'
   end
 
   test do
-    system "#{bin}/console"
+    system "#{bin}/resume-gen"
   end
 end
